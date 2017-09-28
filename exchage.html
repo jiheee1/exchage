@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+
+<head>
+  <title>환율 계산기 실습</title>
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+
+  <style>
+    html {font-family: 'Spoqa Han Sans', 'Sans-serif'; } 
+    input{font-weight:100;font-size: 2em;}
+    button{font-weight:100;font-size: 1em;} }
+    body{font-weight:100;font-size: 2em;}   
+    h1{font-weight:100; color:red;}
+  </style>
+</head>
+
+<body>
+  <h1 id="display">엔화 환율 계산기</h1><br>
+  <input type="text" id="rate" placeholder="현재의 엔화 환율">
+  <br><br><input type="text" id="jpy" placeholder="환전하고 싶은 금액(円)">엔(円)
+  
+  <br><br><button id="action">를 원화(KRW)로 계산하기</button>
+  
+
+  <script>
+    //변수와 함수
+    // variable and function
+    action.onclick = function(){
+      console.log("OK");
+      var nowExchange = rate.value
+      var myJpy = jpy.value
+      myWon(nowExchange, myJpy);
+    }
+
+  function myWon(rate, jpy){
+    var myWon = rate * jpy;
+
+    var Text =   "현재 환율로 " + jpy + " 엔(円)은 " + myWon + "원(KRW) 입니다";
+    display.innerHTML = Text;
+
+  }
+
+  </script>
+
+</body>
